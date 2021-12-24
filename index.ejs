@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     <script>
         function init(){
-            var id = localStorage.getItem('id');
+            var id = sessionStorage.getItem('id');
             if(id == null){
                 location.href = './login';
             }
@@ -17,7 +17,7 @@
 
         function submitForm(){
             var myXml = new XMLHttpRequest();
-            var id = localStorage.getItem('id');
+            var id = sessionStorage.getItem('id');
             myXml.onload = function(){
                 location.reload();
             }
