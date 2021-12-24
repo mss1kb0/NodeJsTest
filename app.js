@@ -54,6 +54,7 @@ function res_index(req, res) {
             data = qs.parse(body);
             addToData(data.id, data.msg, filename, req);
             write_index(req, res);
+            location.href = '/';
         });
     } else {
         write_index(req, res);
@@ -83,7 +84,7 @@ function addToData(id, msg, fname, req) {
     var obj_str = JSON.stringify(obj);
     message_data.unshift(obj_str);
     if (message_data.length > max_num) {
-        message.data.pop();
+        message_data.pop();
     }
     saveToFile(fname);
 }
