@@ -13,7 +13,7 @@ const http = require('http');
 const fs = require('fs');
 const ejs = require('ejs');
 
-const index_page = fs.readFileSync('./pages/index.ejs', 'UTF8');
+const index_page = fs.readFileSync('./index.ejs', 'UTF8');
 var server = http.createServer(getFromClient);
 
 server.listen(5000);
