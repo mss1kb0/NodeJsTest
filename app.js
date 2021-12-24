@@ -54,7 +54,8 @@ function res_index(req, res) {
             data = qs.parse(body);
             addToData(data.id, data.msg, filename, req);
             write_index(req, res);
-            location.href = '/';
+            res.writeHead(200, { Location: '/' });
+            res.end();
         });
     } else {
         write_index(req, res);
