@@ -1,1 +1,1 @@
-web: node ex-gen-app bin/www
+web: npm start
