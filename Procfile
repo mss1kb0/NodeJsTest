@@ -1,0 +1,1 @@
+web: node ex-gen-app bin/www
